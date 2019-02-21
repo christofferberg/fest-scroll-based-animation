@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@adaptagency/fe_tools": "^1.6.4",
+    "basicscroll": "^3.0.1",
     "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",

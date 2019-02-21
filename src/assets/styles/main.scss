@@ -6,3 +6,9 @@
 @import "base/base";
 // Elements
 @import "abstractions/abstractions";
+
+.scene {
+  width: 100%;
+  transform: translateY(var(--translateY));
+  will-change: transform;
+}

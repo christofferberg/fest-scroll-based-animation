@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
+import * as basicScroll from 'basicscroll';
+import foreground from './images/foreground.png';
+import middleground from './images/middleground.png';
+import background from './images/background.png';
+
+document.querySelectorAll('.scene').forEach((elem) => {
+  const modifier = elem.getAttribute('data-modifier');
+
+  basicScroll.create({
+    elem,
+    from: 0,
+    to: 519,
+    direct: true,
+    props: {
+      '--translateY': {
+        from: '0',
+        to: `${ 10 * modifier }px`,
+      },
+    },
+  }).start();
+});
 
 class Frontpage extends Component {
-  state = {
-    clickedValue: 1,
-  };
-
-  onClick = value => {
-    this.setState({
-      clickedValue: value,
-    });
-  };
-
   render() {
-    const { clickedValue } = this.state;
-
     return (
       <div className="page page-frontpage">
-
-        <h1>Home {clickedValue}</h1>
-
-        <button type="button" onClick={() => this.onClick('1')}>1</button>
-        <button type="button" onClick={() => this.onClick('2')}>2</button>
-        <button type="button" onClick={() => this.onClick('3')}>3</button>
-
+        <img className="scene" data-modifier="30" src={background} alt="background"/>
+        <img className="scene" data-modifier="18" src={middleground} alt="middleground"/>
+        <img className="scene" data-modifier="12" src={foreground} alt="foreground"/>
       </div>
     );
   }
