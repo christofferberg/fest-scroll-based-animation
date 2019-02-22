@@ -8,7 +8,7 @@ import third from './images/third.png';
 class Frontpage extends Component {
   componentDidMount() {
     document.querySelectorAll('.scene')
-      .forEach((elem) => {
+      .forEach(elem => {
         const modifier = elem.getAttribute('data-modifier');
 
         basicScroll.create({
@@ -56,6 +56,20 @@ class Frontpage extends Component {
 
     ScrollReveal()
       .reveal('.slide-up-delayed', slideUpDelayed);
+
+
+    let scrollpos = window.scrollY;
+    const title = document.querySelector('.anim__title');
+    const addClassOnScroll = (target) => target.classList.add('is-hidden');
+    const removeClassOnScroll = (target) => target.classList.remove('is-hidden');
+    window.addEventListener('scroll', () => {
+      scrollpos = window.scrollY;
+      if (scrollpos >= 250) {
+        addClassOnScroll(title);
+      } else {
+        removeClassOnScroll(title);
+      }
+    });
   }
 
   render() {
@@ -64,8 +78,8 @@ class Frontpage extends Component {
         <div className="anim">
           <h1 className="anim__title slide-up">FeST Challenge 03.</h1>
           <div className="anim__scenes">
-            <img className="scene" data-modifier="40" src={first} alt="background"/>
-            <img className="scene scene--second" data-modifier="30" src={second} alt="middleground"/>
+            <img className="scene" data-modifier="55" src={first} alt="background"/>
+            <img className="scene scene--second" data-modifier="35" src={second} alt="middleground"/>
             <img className="scene scene--third" data-modifier="10" src={third} alt="foreground"/>
           </div>
         </div>

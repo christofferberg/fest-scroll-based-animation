@@ -43,7 +43,7 @@ main {
     margin: 0;
     z-index: 5;
     position: fixed;
-    top: 35vh;
+    top: 40vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -92,4 +92,8 @@ main {
       font-weight: normal;
     }
   }
+}
+
+.is-hidden {
+  display: none;
 }
