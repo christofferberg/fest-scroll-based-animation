@@ -9,7 +9,7 @@
 
 body {
   background-color: black;
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 main {
@@ -23,6 +23,8 @@ main {
   position: relative;
   overflow: visible;
   height: 1700px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &::after {
     content: "";
@@ -43,7 +45,7 @@ main {
     margin: 0;
     z-index: 5;
     position: fixed;
-    top: 40vh;
+    top: 350px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;

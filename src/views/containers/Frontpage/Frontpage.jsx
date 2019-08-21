@@ -86,12 +86,12 @@ class Frontpage extends Component {
 
         <div className="cards">
           <div className="card slide-up">
-            <img src="https://picsum.photos/500/300?image=322" alt="alt tag"/>
+            <img src="https://source.unsplash.com/_K0sTUUHQDE/500x300" alt="alt tag"/>
             <h2 className="card__title">This is a card</h2>
           </div>
 
           <div className="card slide-up-delayed">
-            <img src="https://picsum.photos/500/300?image=839" alt="alt tag"/>
+            <img src="https://source.unsplash.com/7V1DnVStvik/500x300" alt="alt tag"/>
             <h2 className="card__title">This is a card</h2>
           </div>
         </div>
